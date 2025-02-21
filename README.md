@@ -9,6 +9,8 @@
   - HTTPS 요청은 CONNECT 방식을 통해 터널링 지원
 - **멀티 스레드 구조**:
   - `pthread_create()`를 이용해 각 클라이언트 연결을 별도의 스레드에서 처리
+- **FSM 기반 연결 관리**  
+  - 각 연결은 FSM을 통해 상태 전이(STATE_INIT, STATE_PROCESS, STATE_TUNNEL, STATE_RELAY, STATE_CLOSING)를 관리하여 에러 처리와 로직 구분을 명확히 함
 - **매개변수 기반 포트 설정**:
   - 실행 시 포트 번호를 인자로 받아 설정 (기본 포트: 8888)
 - **도메인 차단 기능**:
