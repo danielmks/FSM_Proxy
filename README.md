@@ -52,7 +52,7 @@
 
 ### 시퀀스 다이어그램
 
-![diagram](images/multi_thread_diagram.png)
+![diagram](images/multi_thread_diagram-2.png)
 
 ### 상태 다이어그램
 
