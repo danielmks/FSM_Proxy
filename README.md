@@ -54,5 +54,9 @@
 
 ![diagram](images/multi_thread_diagram.png)
 
+### 상태 다이어그램
+
+![diagram](images/state_diagram.png)
+
 
 
