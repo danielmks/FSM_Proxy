@@ -98,4 +98,3 @@ int main(int argc, char *argv[]) {
     sem_destroy(&thread_sem);
     return 0;
 }
-
