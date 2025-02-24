@@ -1,4 +1,4 @@
-# Multi-threaded HTTP/HTTPS Proxy Server
+# Multi-threaded HTTP/HTTPS Proxy Server WITH FSM
 
 이 프로젝트는 멀티 스레드 구조를 사용하여 HTTP와 HTTPS(Connect 방식) 요청을 처리할 수 있는 프록시 서버입니다.
 
