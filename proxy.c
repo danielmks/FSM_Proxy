@@ -94,7 +94,7 @@ void handle_client(int client_socket) {
     int remote_socket = -1;
     char buffer[BUFFER_SIZE];
     int n;
-    int is_https = 0; // 1: HTTPS, 0: HTTP
+    /*int is_https = 0; // 1: HTTPS, 0: HTTP*/
 
     while (1) {
         switch (state) {
@@ -112,7 +112,7 @@ void handle_client(int client_socket) {
             case STATE_PROCESS: {
                 // 요청의 유형(HTTPS CONNECT vs HTTP) 파악 및 원격 서버 연결
                 if (strncmp(buffer, "CONNECT", 7) == 0) {
-                    is_https = 1;
+                    //is_https = 1;
                     char target[256];
                     int port = DEFAULT_HTTPS_PORT;
                     char *p = buffer + 8;  // "CONNECT " 이후부터 파싱
@@ -174,7 +174,7 @@ void handle_client(int client_socket) {
                     }
                     state = STATE_TUNNEL;
                 } else {  // HTTP 요청 처리
-                    is_https = 0;
+                    //is_https = 0;
                     char *host_header = strstr(buffer, "Host:");
                     if (!host_header) {
                         fprintf(stderr, "Host header not found\n");
